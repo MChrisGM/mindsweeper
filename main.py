@@ -10,7 +10,7 @@ print((" "*8)+"Type the letter and number of the cell you want to show")
 print("To flag:")
 print((" "*8)+"Type 'flag' and then the letter and number of the cell you want to "+flag)
 print("To win:")
-print((" "*7)+"Try not to hit any "+bomb)
+print((" "*8)+"Try not to hit any "+bomb+"  while you uncover all the tiles")
 print("─"*77)
 print()
 
