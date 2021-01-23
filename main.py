@@ -19,15 +19,16 @@ state = "lobby"
 print("Select settings: ")
 print((" "*17)+"a) 5x5")
 print((" "*17)+"b) 10x10")
-print((" "*17)+"c) 20x20")
+print((" "*17)+"c) 15x15")
+print((" "*17)+"d) 20x20")
 
 lobbySelection = ""
 
 def lobbyCheck():
   global lobbySelection
   lobbySelection = input("Input the corresponding letter for your table(a,b,c): ")
-  if (lobbySelection in "abc") or (lobbySelection in "ABC"):
-    if lobbySelection == "a" or lobbySelection == "b" or lobbySelection == "c" or lobbySelection == "A" or lobbySelection == "B" or lobbySelection == "C":
+  if (lobbySelection in "abcd") or (lobbySelection in "ABCD"):
+    if lobbySelection == "a" or lobbySelection == "b" or lobbySelection == "c" or lobbySelection == "A" or lobbySelection == "B" or lobbySelection == "C" or lobbySelection == "D" or lobbySelection == "d":
       print("Your selection: Setting "+lobbySelection)
       return lobbySelection
     else:
@@ -49,6 +50,8 @@ if lobbySelection == "A":
 elif lobbySelection == "B":
   tableSize = 10
 elif lobbySelection == "C":
+  tableSize = 15
+elif lobbySelection == "D":
   tableSize = 20
 
 nums = np.random.binomial(n=1, p=0.15, size=[tableSize**2])
