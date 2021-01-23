@@ -1,10 +1,18 @@
 import numpy as np
 
+bomb = "\U0001F4A3"
+flag = "\U0001F6A9"
+
 print("MineSweeper game!")
+print("─"*77)
 print("To play:")
-print((" "*8)+"Type the letter and number of the cell you want to enable")
+print((" "*8)+"Type the letter and number of the cell you want to show")
 print("To flag:")
-print((" "*8)+"Type 'flag' and then the letter and number of the cell you want to flag")
+print((" "*8)+"Type 'flag' and then the letter and number of the cell you want to "+flag)
+print("To win:")
+print((" "*7)+"Try not to hit any "+bomb)
+print("─"*77)
+print()
 
 state = "lobby"
 
@@ -14,9 +22,6 @@ print((" "*17)+"b) 10x10")
 print((" "*17)+"c) 20x20")
 
 lobbySelection = ""
-
-bomb = "\U0001F4A3"
-flag = "\U0001F6A9"
 
 def lobbyCheck():
   global lobbySelection
@@ -79,7 +84,7 @@ def printGrd(grid):
       s = len(str(tableSize))-1
     print(str(i+1)+" "*(s)+"│ "+"  ".join(grid[i]))
 
-print()
+print("─"*77)
 print("Flags: "+str(flagN))
 print()
 print("Bomb count: "+str(bombCount))
@@ -122,7 +127,7 @@ def cellSelection():
     return cellSelection()
 
 while state != "ended":
-  print()
+  print("─"*77)
   lost = False
   (col,row),isFlag = cellSelection()
 
