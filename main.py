@@ -3,6 +3,8 @@ import numpy as np
 print("MineSweeper game!")
 print("To play:")
 print((" "*8)+"Type the letter and number of the cell you want to enable")
+print("To flag:")
+print((" "*8)+"Type 'flag' and then the letter and number of the cell you want to flag")
 
 state = "lobby"
 
