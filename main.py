@@ -34,6 +34,7 @@ lobbyCheck()
 lobbySelection = lobbySelection.upper()
 
 state = "setup"
+
 tableSize = 0
 
 if lobbySelection == "A":
